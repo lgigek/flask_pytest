@@ -3,7 +3,7 @@ from flask import jsonify
 
 example = Blueprint('example', __name__)
 
-
-@example.route('/hello', methods=['GET'])
+# GET is the default method, no need to declare it!
+@example.route('/hello')
 def hello():
-    return jsonify({'Message': 'Hello world'}), 200
+    return jsonify({'Message': 'Hello world!'}), 200
